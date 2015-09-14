@@ -10,6 +10,10 @@ I have made it
 
 Try at your side!!!
 
+<<<<<<< HEAD
 Try at your side!!!
 
 Try at your side!!!
+=======
+jjjbuibuhbuibhuibhuiub
+>>>>>>> f0dd563c76d9256e76f5ba3b93932c88ce84f196
