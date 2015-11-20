@@ -1,0 +1,114 @@
+body{
+	width: 100%;
+	margin: auto;
+}
+
+.container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header{
+	background-color: #6396bc;
+	width: 100%;
+	top: 0;
+	position:fixed;
+}
+
+.logo{
+	float: left;
+	font-family: "Helvetica";
+	font-size: 15px;
+}
+
+a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+li{
+	list-style: none;
+	background-color: #660066;
+	display: block;
+	padding: 15px;	/* make the block background color big */
+	float: left;	/* put them in one line */
+	margin-left: 15px; /* leave space from one list to the other*/
+	margin-top: 0px;  /* take the list from up to down or other way around*/
+	border-radius: 5px;	/* make the button corner round*/
+	border: 1px solid silver; /* border for button coreners*/
+}
+
+.nav{
+	float: right;
+}
+
+.content{
+	margin-top: 80px; /* take content page down to see the hidden text */
+	background-color: lightblue;
+}
+
+/*FOOTER SECTION*/
+footer{
+	width: 100%;
+	height: 450px;
+	background-color: #6396bC; 
+	margin-top: 300px; /* take the footer down */
+}
+
+#foot{
+	width: 960px; /*size of the container*/
+	height: 80%; /* height takes 100%*/
+	margin: 0 auto;
+}
+
+h3{
+	color: #FFFFFF;
+}
+
+div.social{
+	float: left; /* each one fall on the right side of the other*/
+	margin-top: 20px;
+}
+
+a.social{
+	margin-right: 15px; /* space for each other */
+}
+
+div.contact{
+	float: right; /* take all the contact right side*/
+	margin-right: 200px; /* take them litle bit from right to left*/
+	margin-top: 20px; /* take all the contact litle down */
+}
+
+label{
+	color: #FFFFFF;
+}
+
+/* Set size of the label and text box */
+input.text{
+	height: 30px;
+	width: 250px;
+	border-radius: 3px;
+	border: none;
+}
+
+/* Set textarea height and width */
+textarea.message{
+	height: 100px;
+	width: 250px;
+	border-radius: 3px;
+	border: none;	
+}
+
+input.submit{
+	width: 60px;
+	height: 30px
+	background-color: #FFFFFF;
+	color: #6396bC;
+	border: none;
+	border-radius: 3px;
+}
+
+input.submit:hover{
+	text-decoration: underline;
+}
