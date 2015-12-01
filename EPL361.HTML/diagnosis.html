@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SkinHealth</title>
+
+	<!-- Stylianos CSS -->
+    <link rel="stylesheet" type="text/css" href="css/registration.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Site CSS -->
+    <link href="css/site.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- JQuery -->
+    <script src="js/jquery.1.9.1.min.js"></script>
+    <!-- Bootstrap core js -->
+    <script src="js/bootstrap.js"></script>
+     <script> 
+    $(function(){
+      $("#menu").load("_loggedMenu.html"); 
+	  $("#footer").load("_footer.html"); 
+    });
+    </script> 
+  </head>
+
+  <body>
+
+    <!--Menu-->
+    <div id="menu"></div>
+    
+	<!--Content-->
+    
+    <div class="container mainContent">
+    	
+		<div class="first">
+			<div class="row ">
+            	 <div class="col-sm-12 allignCenter">
+                 	<h2>Diagnosis</h2>
+                 </div>     
+            </div>	
+            
+            <div class="row marginTop20" style="font-size:20px">
+            	<div class="col-sm-3 allignRight"><label>First Name: </label></div>
+                <div class="col-sm-1" style="color:blue"> Andreas</div>
+                <div class="col-sm-2 allignRight"><label>Last Name: </label></div>
+                <div class="col-sm-3" style="color:blue"> Andreou</div>
+            </div>
+            
+            
+            <div class="row" style="font-size:20px">
+				<div class="col-sm-3 allignRight"><label>Date Of Birth: </label></div>
+                <div class="col-sm-1" style="color:blue"> 02/12/1999</div>                
+            </div>	
+            
+            <div class="row" style="font-size:20px">
+				<div class="col-sm-3 allignRight"><label>Telephone: </label></div>
+                <div class="col-sm-1" style="color:blue"> 99-998877</div>                
+            </div>	
+            
+            <div class="row" style="font-size:20px">
+				<div class="col-sm-3 allignRight"><label>City/Village: </label></div>
+                <div class="col-sm-1" style="color:blue"> Nicosia</div>                
+            </div>
+            
+            <div class="row" style="font-size:20px">
+				<div class="col-sm-3 allignRight"><label>Diagnosis: </label></div>
+                <div class="col-sm-5">
+                	<select id="diagnosis" name="diagnosis" class="form-control">
+                    	<option value="1">None</option>
+                        <option value="2">Acme</option>
+                        <option value="3">Burn</option>
+                        <option value="4">Rest of Diagnosis will follow...</option>
+                    </select> 
+                </div>                
+            </div>	
+            
+            
+            <div class="row marginTop20" style="font-size:20px">
+				<div class="col-sm-3 allignRight"><label>Comments: </label></div>
+                <div class="col-sm-5" style="color:blue">
+                	<textarea style="resize:none; height:130px; width:415px" name="disc" id="disc" placeholder="Please add any comments here"></textarea>
+                 </div>                           
+            </div>
+            
+            <div class="row" style="font-size:20px">
+				<div class="col-sm-3 allignRight marginTop10"><label>Photos: </label></div>
+                <div class="col-sm-5" style="color:blue"> 
+                	<form action="">
+  						<input style="border:none; box-shadow:none" type="file" name="img" multiple accept="image/*">  						
+					</form> 
+                 </div>                
+            </div>
+            
+            
+             <div class="row" style="font-size:20px">
+				<div class="col-sm-3 allignRight"><label>Medicines prescripted: </label> <br> <h5>Hold Ctrl key to select multiple.</h5></div>
+                <div class="col-sm-5">
+                	<select multiple id="medicines" name="medicines" class="form-control">
+                    	<option value="1">None</option>
+                        <option value="2">Medicine 1</option>
+                        <option value="3">Medicine 2</option>
+                        <option value="4">Medicine 3</option>
+                        <option value="5">Medicine 4</option>
+                        <option value="6">Rest of Medicines follow...</option>
+                    </select> 
+                </div>                
+            </div>	
+            
+             <div class="row marginTop20" >
+				<div class="col-sm-3"></div>
+                <div class="col-sm-3"><a href="laser.html" class="btn btn-primary btn-sm">Laser</a></div>
+                <div class="col-sm-3"><a href="#" class="btn btn-primary btn-sm">Save</a></div>        
+            </div>
+            
+            
+            	
+		</div>
+    
+    
+	
+     
+    </div>
+    <!--Content-->
+	
+	<!--Footer-->
+    
+     <div id="footer"></div>
+
+  </body>
+</html>

@@ -6,7 +6,7 @@ body{
 	font-family:'Ubuntu',sans-serif
 }
 
-div.container{
+div.container11{
 	width: 500px;
 	height: 100%;
 	margin: 0 auto;
@@ -17,8 +17,7 @@ div.container{
 	margin:30px auto
 }
 .first{
-	width:400px;
-	height:740px;
+	
 	box-shadow:0 0 0 1px rgba(14,41,57,0.12),0 2px 5px rgba(14,41,57,0.44),inset 0 -1px 2px rgba(14,41,57,0.15);
 	float:left;
 	padding:10px 50px 0;
@@ -60,3 +59,5 @@ input[type=submit]{
 input[type=submit]:hover{
 	background:linear-gradient(to bottom,#36caf0 5%,#22abe9 100%)
 }
+
+input[type=radio] { display:inline !important; }

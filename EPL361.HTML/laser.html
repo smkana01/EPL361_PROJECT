@@ -1,31 +1,127 @@
-<html>
-<head>
-	<title>laser</title>
-	<link rel="stylesheet" type="text/css" href="css/registration.css">
-	<link rel="stylesheet" type="text/css" href="css/secretary.css">
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<body>
-	<div class="container">
-		<div class="mainBox">
-			<div class="first">
-				<div id="log-sout">
-					<a href="#" class="sign-out">Sign out</a>
-					<h1 id="skinText">Skin Health</h1>
-				</div>
+    <title>SkinHealth</title>
 
-				<center><h3>Laser</h3></center>
+	<!-- Stylianos CSS -->
+    <link rel="stylesheet" type="text/css" href="css/registration.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Site CSS -->
+    <link href="css/site.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- JQuery -->
+    <script src="js/jquery.1.9.1.min.js"></script>
+    <!-- Bootstrap core js -->
+    <script src="js/bootstrap.js"></script>
+     <script> 
+    $(function(){
+      $("#menu").load("_loggedMenu.html"); 
+	  $("#footer").load("_footer.html"); 
+    });
+    </script> 
+  </head>
 
-				<form action="" method="post">
-					<input class="laser" name="dsubmit" type="submit" value="Laser Hair Remover">
-					<input class="laser" name="dsubmit" type="submit" value="Laser Tattoo Remover">
-					<input class="laser" name="dsubmit" type="submit" value="Laser Skin Regeneration">
-					<input class="laser" name="dsubmit" type="submit" value="Laser Spider Veins">
+  <body>
+
+    <!--Menu-->
+    <div id="menu"></div>
+    
+	<!--Content-->
+    
+    <div class="container mainContent">
+    	
+		<div class="first allignCenter">
+				
+				<h3>Laser Use Parameters</h3>
+
+				<form action="#" method="post">	
+                	<div class="row">
+                    <div class="col-sm-4 allignRight marginTop25">	
+						<label>Laser:</label></div>
+                    <div class="col-sm-4 marginTop20" align="left">
+						<select id="laserType" name="laserType" class="form-control">
+                        	<option value="hairRemover">Hair Remover Laser</option>
+                            <option value="tattooRemover">Tattoo Remover Laser</option>
+                            <option value="skinRegeneration">Skin Regeneration Laser</option>
+                            <option value="spiderVeins">Spider Veins Laser</option>
+                        </select>
+                     </div></div>
+
+					<div class="row"><div class="col-sm-4 allignRight marginTop25">
+                    <label>Energy:</label></div>
+                     <div class="col-sm-4 marginTop20" align="left">
+					<input style="width:100%" name="energy" placeholder="Energy" type="number"></div>
+                    </div>
+                    
+			
+					<div class="row"> <div class="col-sm-4 allignRight marginTop25">
+                    <label>Pulse Duration:</label></div>
+                    <div class="col-sm-4 marginTop20" align="left">
+					<input style="width:100%" name="pDuration" placeholder="Pulse Duration" type="number"></div>
+                    </div>
+
+					<div class="row"><div class="col-sm-4 allignRight marginTop25">
+                    <label>DCC:</label></div>
+                     <div class="col-sm-4 marginTop20">               
+                     	<select id="dcc" name="dcc" class="form-control">
+                        	<option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div></div>
+                    
+
+					<div class="row"><div class="col-sm-4 allignRight marginTop25">
+                    <label>Spray:</label></div>
+                    <div class="col-sm-4 marginTop20" align="left">
+					<input style="width:100%" name="spray" placeholder="Spray" type="number"></div></div>
+                    
+                    <div class="row"><div class="col-sm-4 allignRight marginTop25">
+                    <label>Delay:</label></div>
+                    <div class="col-sm-4 marginTop20" align="left">
+					<input style="width:100%" name="delay" placeholder="Delay" type="number"></div></div>
+                    
+                     <div class="row"><div class="col-sm-4 allignRight marginTop25">	
+						<label>Area Treated:</label></div>
+                     <div class="col-sm-4 marginTop20" align="left">
+						<select id="area" name="area" class="form-control">
+                        	<option value="hand">Hand</option>
+                            <option value="leg">Leg</option>
+                            <option value="face">Face</option>
+                            <option value="back">Back</option>
+                            <option value="other">Other options will follow here</option>
+                        </select>
+                     </div></div>
+                     
+                     <div class="row"><div class="col-sm-4 allignRight marginTop25">
+                    <label>Price:</label></div>
+                    <div class="col-sm-4 marginTop20" align="left">
+					<input style="width:100%" name="price" placeholder="price" type="number"></div></div>
+
+					<div class="col-sm-4 marginTop20"></div>
+                    <div class="col-sm-4 marginTop20" align="left">
+                    <input style="width:100%" name="dsubmit" type="submit" value="Submit"></div>
+
 				</form>
 			</div>
-		</div>
-	</div>
+    
+    
+	
+     
+    </div>
+    <!--Content-->
+	
+	<!--Footer-->
+    
+     <div id="footer"></div>
 
-</body>
+  </body>
 </html>

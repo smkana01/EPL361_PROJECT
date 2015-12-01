@@ -1,0 +1,104 @@
+/* CSS Document */
+
+.navbar-brand {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.navbar a{
+	font-size:15px;
+}
+
+.mainContent{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.footer{
+	background-color:#eaeaea;
+	padding:40px;
+	margin-top:40px;
+}
+
+.footer a{
+	font-size:13px;
+}
+
+.first{
+	width:100%; /*before=400*/
+	height:640px; /*before=610*/
+	box-shadow:0 0 0 1px rgba(14,41,57,0.12),0 2px 5px rgba(14,41,57,0.44),inset 0 -1px 2px rgba(14,41,57,0.15);
+	float:left;
+	padding:10px 50px 0;
+	margin-top: 50px; 
+}
+
+.marginTop5{
+	margin-top:5px;
+}
+
+.marginTop10{
+	margin-top:10px;
+}
+
+.marginTop20{
+	margin-top:20px;
+}
+
+.marginTop25{
+	margin-top:25px;
+}
+
+.marginTop40{
+	margin-top:40px;
+}
+
+.marginTop80{
+	margin-top:80px;
+}
+
+.marginTop100{
+	margin-top:100px;
+}
+
+.paddingLeft10{
+	padding-left:10px
+}
+
+.paddingLeft25{
+	padding-left:25px
+}
+
+.mainBox{
+	border:solid 1px #333;
+	padding:20px;
+}
+
+.allignCenter{
+	text-align:center;
+}
+
+.allignRight{
+	text-align:right;
+}
+
+.searchwebsite{
+	background-image: url(../images/searchWebsite.png);
+	background-repeat: no-repeat;
+	background-position:10px center;
+	box-shadow: none;
+	padding-left:40px;
+}
+
+.sectionBack{
+	background-color:#eaeaea;
+	padding:20px;
+	border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	cursor:pointer;
+}
+
+.sectionBack:hover{
+	background-color:#cccccc;
+}
+

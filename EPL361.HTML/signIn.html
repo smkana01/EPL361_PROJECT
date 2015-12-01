@@ -1,28 +1,95 @@
-<html>
-<head>
-	<title>Signin Form</title>
-	<link rel="stylesheet" type="text/css" href="css/registration.css">
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
-	<div class="container">
-		<div class="main">
-			<div class="first">
-				<form action="" method="post">
-					<h1>Skin Health</h1>
-					<h3>Sign in</h3>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-					<label>Username:</label>
-					<input name="username" placeholder="Username" type="text">
+    <title>SkinHealth</title>
 
-					<label>Password:</label>
-					<input name="password" placeholder="Password" type="password">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Site CSS -->
+    <link href="css/site.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- JQuery -->
+    <script src="js/jquery.1.9.1.min.js"></script>
+    <!-- Bootstrap core js -->
+    <script src="js/bootstrap.js"></script>
+     <script> 
+    $(function(){
+      $("#menu").load("_menu.html"); 
+	  $("#footer").load("_footer.html"); 
+    });
+    </script> 
+  </head>
 
-					<input name="dsubmit" type="submit" value="Sign in">
+  <body>
 
-				</form>
-			</div>
+    <!--Menu-->
+    <div id="menu"></div>
+    
+	<!--Content-->
+    <div class="container mainContent">
+    	<div class="first">
+            	<div class="row marginTop40"><div class="col-sm-12 allignCenter">
+                <div class="row"><div class="col-sm-12 allignCenter"><h2><i class="fa fa-lock"></i>	Sign In </h2></div></div>
+              
+                <div class="row marginTop10">
+                	<div class="col-sm-4"></div>
+                	<div class="col-sm-4">
+                    	<h4>               			
+						  <form action="HomeScreen.html" method="post">
+                            	<div class="col-sm-4">
+                        			<p class="allignRight"><label>Username:</label></p>
+                         		</div>
+								<div class="col-sm-4">
+                        			<input name="user" type="text" required placeholder="Username">
+                       		  </div>
+								<div class="col-sm-4"></div>                           
+								<br>
+                                
+                       			<div class="row marginTop20"></div>
+                                <div class="col-sm-4"> 
+									<p class="allignRight"><label>Password:</label></p>
+                                </div>
+                                <div class="col-sm-4"> 
+									<input name="password" type="password" required placeholder="Password">
+                                </div>
+                                <div class="col-sm-4"></div>
+								<br>
+                        		<div class="row marginTop40"></div>
+                                
+                            <div class="col-sm-12">
+								<div class="row" align="center">
+                                <input class="btn btn-primary btn-lg" name="submit" type="submit" value=" Sign In ">
+                                </div>
+                                </div>
+                               
+							</form>  
+                           </h4>                  		
+					</div>
+				</div>
+    		</div>        
 		</div>
-	</div>
-</body>
+	
+    </div>
+
+	
+    
+    
+	
+     
+    </div>
+    <!--Content-->
+	
+	<!--Footer-->
+    
+     <div id="footer"></div>
+
+  </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SkinHealth</title>
+
+	<!-- Stylianos CSS -->
+    <link rel="stylesheet" type="text/css" href="css/registration.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Site CSS -->
+    <link href="css/site.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- JQuery -->
+    <script src="js/jquery.1.9.1.min.js"></script>
+    <!-- Bootstrap core js -->
+    <script src="js/bootstrap.js"></script>
+     <script> 
+    $(function(){
+      $("#menu").load("_loggedMenu.html"); 
+	  $("#footer").load("_footer.html"); 
+    });
+    </script> 
+  </head>
+
+  <body>
+
+    <!--Menu-->
+    <div id="menu"></div>
+    
+	<!--Content-->
+    
+    <div class="container mainContent">
+    	
+		<div class="first allignCenter">
+				<form action="#" method="post">
+					
+					<h3>Patient Registration form</h3>
+
+					
+                    <div class="col-sm-4 allignRight marginTop25">	
+						<label>Firstname:</label></div>
+                    <div class="col-sm-5 marginTop20" align="left">
+					<input name="fname" placeholder="Firstname" type="text"></div>
+
+					
+                    <div class="col-sm-4 allignRight marginTop25">
+                    <label>Lastname:</label></div>
+                     <div class="col-sm-5 marginTop20" align="left">
+					<input name="sname" placeholder="Lastname" type="text"></div>
+
+					<div class="col-sm-4 allignRight marginTop25">
+                    <label>Date of Birth:</label></div>
+                    <div class="col-sm-5 marginTop20" align="left">
+					<input name="date" placeholder="Date of Birth" type="date"></div>
+                    
+
+					<div class="col-sm-4 allignRight marginTop25">
+                    <label>Telephone:</label></div>
+                     <div class="col-sm-5 marginTop20" align="left">
+					<input name="tel" placeholder="Telephone" type="tel"></div>
+                    
+
+					<div class="col-sm-4 allignRight marginTop25">
+                    <label>City/Village:</label></div>
+                    <div class="col-sm-5 marginTop20" align="left">
+					<input name="city" placeholder="City/Village" type="text"></div>
+
+					<div class="col-sm-4 marginTop20"></div>
+                    <div class="col-sm-5 marginTop20" align="left">
+                    <input name="dsubmit" type="submit" value="Register"></div>
+
+				</form>
+			</div>
+    
+    
+	
+     
+    </div>
+    <!--Content-->
+	
+	<!--Footer-->
+    
+     <div id="footer"></div>
+
+  </body>
+</html>
