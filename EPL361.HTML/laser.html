@@ -28,6 +28,13 @@
 	  $("#footer").load("_footer.html"); 
     });
     </script> 
+    
+    <script>
+	function added() {
+    alert("Laser's configuration added to diagnosis!");
+	}
+	</script>
+    
   </head>
 
   <body>
@@ -43,7 +50,7 @@
 				
 				<h3>Laser Use Parameters</h3>
 
-				<form action="#" method="post">	
+				<form action="diagnosis.html" method="post">	
                 	<div class="row">
                     <div class="col-sm-4 allignRight marginTop25">	
 						<label>Laser:</label></div>
@@ -108,7 +115,7 @@
 
 					<div class="col-sm-4 marginTop20"></div>
                     <div class="col-sm-4 marginTop20" align="left">
-                    <input style="width:100%" name="dsubmit" type="submit" value="Submit"></div>
+                    <input style="width:100%" name="dsubmit" type="submit" onClick="added()" value="Submit"></div>
 
 				</form>
 			</div>

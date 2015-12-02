@@ -27,14 +27,45 @@
       $("#menu").load("_loggedMenu.html"); 
 	  $("#footer").load("_footer.html"); 
     });
-    </script> 
+    </script>
     
-    <script>
-	function added() {
-    alert("New diagnosis created successfully!");
-	}
-	</script>
-    
+    <script type="text/javascript">
+/*
+* Image preview script
+* powered by jQuery (http://www.jquery.com)
+*/
+this.imagePreview = function(){
+/* CONFIG */
+xOffset = 10;
+yOffset = 30;
+// these 2 variable determine popup's distance from the cursor
+// you might want to adjust to get the right result
+/* END CONFIG */
+$("a.preview").hover(function(e){
+this.t = this.title;
+this.title = "";
+var c = (this.t != "") ? "<br/>" + this.t : "";
+$("body").append("<p id='preview'><img src='"+ this.href +"' alt='Image preview' />"+ c +"</p>");     
+$("#preview")
+.css("top",(e.pageY - xOffset) + "px")
+.css("left",(e.pageX + yOffset) + "px")
+.fadeIn("fast");   
+},
+function(){
+this.title = this.t;
+$("#preview").remove();
+});
+$("a.preview").mousemove(function(e){
+$("#preview")
+.css("top",(e.pageY - xOffset) + "px")
+.css("left",(e.pageX + yOffset) + "px");
+});
+};
+// starting the script on page load
+$(document).ready(function(){
+imagePreview();
+});
+</script> 
   </head>
 
   <body>
@@ -49,7 +80,7 @@
 		<div class="first">
 			<div class="row ">
             	 <div class="col-sm-12 allignCenter">
-                 	<h2>Diagnosis</h2>
+                 	<h2>Patient's History</h2>
                  </div>     
             </div>	
             
@@ -76,54 +107,53 @@
                 <div class="col-sm-1" style="color:blue"> Nicosia</div>                
             </div>
             
-            <div class="row" style="font-size:20px">
-				<div class="col-sm-3 allignRight"><label>Diagnosis: </label></div>
-                <div class="col-sm-5">
-                	<select id="diagnosis" name="diagnosis" class="form-control">
-                    	<option value="1">None</option>
-                        <option value="2">Acme</option>
-                        <option value="3">Burn</option>
-                        <option value="4">Rest of Diagnosis will follow...</option>
-                    </select> 
-                </div>                
-            </div>	
+            <div class="row marginTop40" align="left">
+        		<div class="table-responsive">          
+  					<table class="table">
+    					<thead>
+      						<tr>
+        						<th>Date</th>
+        						<th>Diagnosis</th>
+        						<th>Comments</th>
+        						<th>Photos</th>
+        						<th>Medicines</th>                                
+      						</tr>
+    					</thead>
+    					<tbody>
+      						<tr>
+        						<td>01-Nov-2014</td>
+        						<td>Acme</td>
+        						<td>Some doctor's comments will <br>go here and some more here</td>
+        						<td><a class="preview" href="images/acme.jpg" ><img src="images/acme.jpg" width="30" /></a>
+                                	<a class="preview" href="images/acne2.jpg" ><img src="images/acne2.jpg" width="30" /></a>
+								</td>
+        						<td>1. Brevoxyl<br> 2. Triaz</td>
+        						                             
+      						</tr>
+                            <tr>
+        						<td>15-Feb-2015</td>
+        						<td>Acme</td>
+        						<td>Some doctor's comments will <br>go here and some more here</td>
+        						<td><a class="preview" href="images/noAcne.jpg" ><img src="images/noAcne.jpg" width="30" /></a>                                	
+								</td>
+        						<td></td>               
+      						</tr>
+    					</tbody>
+  					</table>
+  				</div>
+   			</div>
             
             
-            <div class="row marginTop20" style="font-size:20px">
-				<div class="col-sm-3 allignRight"><label>Comments: </label></div>
-                <div class="col-sm-5" style="color:blue">
-                	<textarea style="resize:none; height:130px; width:415px" name="disc" id="disc" placeholder="Please add any comments here"></textarea>
-                 </div>                           
-            </div>
-            
-            <div class="row" style="font-size:20px">
-				<div class="col-sm-3 allignRight marginTop10"><label>Photos: </label></div>
-                <div class="col-sm-5" style="color:blue"> 
-                	<form action="">
-  						<input style="border:none; box-shadow:none" type="file" name="img" multiple accept="image/*">  						
-					</form> 
-                 </div>                
-            </div>
+           
             
             
-             <div class="row" style="font-size:20px">
-				<div class="col-sm-3 allignRight"><label>Medicines prescripted: </label> <br> <h5>Hold Ctrl key to select multiple.</h5></div>
-                <div class="col-sm-5">
-                	<select multiple id="medicines" name="medicines" class="form-control">
-                    	<option value="1">None</option>
-                        <option value="2">Medicine 1</option>
-                        <option value="3">Medicine 2</option>
-                        <option value="4">Medicine 3</option>
-                        <option value="5">Medicine 4</option>
-                        <option value="6">Rest of Medicines follow...</option>
-                    </select> 
-                </div>                
-            </div>	
+            
+            
+             
             
              <div class="row marginTop20" >
-				<div class="col-sm-3"></div>
-                <div class="col-sm-3"><a href="laser.html" class="btn btn-primary btn-sm">Laser</a></div>
-                <div class="col-sm-3"><a href="istoriko.html" onclick="added()" class="btn btn-primary btn-sm">Save</a></div>        
+				<div class="col-sm-7"></div>
+                <div class="col-sm-3"><a href="diagnosis.html" class="btn btn-primary btn-sm">New Diagnosis</a></div>        
             </div>
             
             

@@ -102,3 +102,14 @@
 	background-color:#cccccc;
 }
 
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  cursor: pointer;
+  background-color: #439CD4;
+}
+
+#preview{
+position:absolute;
+border:1px solid #ddd;
+background:#eee;padding:5px;
+display:none;color:#333;
+}
