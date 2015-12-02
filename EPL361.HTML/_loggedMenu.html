@@ -1,8 +1,22 @@
 <!-- Fixed navbar -->
+ <script>
+		if (localStorage.getItem("storageName") === "doctor1"){
+			var user = "Welcome Dr. Andreas H.";
+		}
+		else if (localStorage.getItem("storageName") === "doctor2"){
+			var user = "Welcome Dr. Iasonas H.";
+		}
+		else {
+			var user = "Welcome Sotiroulla";
+		}
+		document.getElementById('welcome').innerHTML = user;
+	</script>
+    
 <div class="container">
-	<div class="row marginTop5"><div class="col-sm-12 allignRight">
-   Welcome Dr.  <a href="signIn.html">Sign Out</a>
-    </div></div>
+	<div class="row marginTop5">
+    	<div class="col-sm-11 allignRight" style="padding-right:inherit" id="welcome"></div>
+    	<div class="col-sm-1 allignRight" style="padding-left:inherit"> or	<a href="signIn.html">Sign Out</a></div>
+    </div>
 </div>
 
 

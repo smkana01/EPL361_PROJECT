@@ -26,6 +26,20 @@
 	  $("#footer").load("_footer.html"); 
     });
     </script> 
+    
+    <script>
+        function signIn(username, password)
+        {	
+			 localStorage.setItem("storageName",username);			
+        	if ((username === 'doctor1' && password === '1234') || (username === 'doctor2' && password === '4321') || (username === 'secretary' && password === '1111')){
+				//alert("Logged in successfully!");
+				window.location.assign("homescreen.html");
+			}
+			else {
+				 alert("Invalid Username and/or Password!!");
+			}
+        }
+    </script>
   </head>
 
   <body>
@@ -43,12 +57,12 @@
                 	<div class="col-sm-4"></div>
                 	<div class="col-sm-4">
                     	<h4>               			
-						  <form action="HomeScreen.html" method="post">
+						  
                             	<div class="col-sm-4">
                         			<p class="allignRight"><label>Username:</label></p>
                          		</div>
 								<div class="col-sm-4">
-                        			<input name="user" type="text" required placeholder="Username">
+                        			<input name="user" id="user" type="text" required placeholder="Username">
                        		  </div>
 								<div class="col-sm-4"></div>                           
 								<br>
@@ -58,7 +72,7 @@
 									<p class="allignRight"><label>Password:</label></p>
                                 </div>
                                 <div class="col-sm-4"> 
-									<input name="password" type="password" required placeholder="Password">
+									<input name="password" id="pass" type="password" required placeholder="Password">
                                 </div>
                                 <div class="col-sm-4"></div>
 								<br>
@@ -66,11 +80,11 @@
                                 
                             <div class="col-sm-12">
 								<div class="row" align="center">
-                                <input class="btn btn-primary btn-lg" name="submit" type="submit" value=" Sign In ">
+                                <input class="btn btn-primary btn-lg" name="submit" type="submit" value=" Sign In " onclick="signIn(document.getElementById('user').value,document.getElementById('pass').value)">
                                 </div>
                                 </div>
                                
-							</form>  
+							
                            </h4>                  		
 					</div>
 				</div>

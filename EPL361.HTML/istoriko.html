@@ -22,6 +22,7 @@
     <script src="js/jquery.1.9.1.min.js"></script>
     <!-- Bootstrap core js -->
     <script src="js/bootstrap.js"></script>
+    
      <script> 
     $(function(){
       $("#menu").load("_loggedMenu.html"); 
@@ -30,42 +31,51 @@
     </script>
     
     <script type="text/javascript">
-/*
-* Image preview script
-* powered by jQuery (http://www.jquery.com)
-*/
-this.imagePreview = function(){
-/* CONFIG */
-xOffset = 10;
-yOffset = 30;
-// these 2 variable determine popup's distance from the cursor
-// you might want to adjust to get the right result
-/* END CONFIG */
-$("a.preview").hover(function(e){
-this.t = this.title;
-this.title = "";
-var c = (this.t != "") ? "<br/>" + this.t : "";
-$("body").append("<p id='preview'><img src='"+ this.href +"' alt='Image preview' />"+ c +"</p>");     
-$("#preview")
-.css("top",(e.pageY - xOffset) + "px")
-.css("left",(e.pageX + yOffset) + "px")
-.fadeIn("fast");   
-},
-function(){
-this.title = this.t;
-$("#preview").remove();
-});
-$("a.preview").mousemove(function(e){
-$("#preview")
-.css("top",(e.pageY - xOffset) + "px")
-.css("left",(e.pageX + yOffset) + "px");
-});
-};
-// starting the script on page load
-$(document).ready(function(){
-imagePreview();
-});
-</script> 
+		/*
+		* Image preview script
+		* powered by jQuery (http://www.jquery.com)
+		*/
+		this.imagePreview = function(){
+		/* CONFIG */
+		xOffset = 10;
+		yOffset = 30;
+		// these 2 variable determine popup's distance from the cursor
+		// you might want to adjust to get the right result
+		/* END CONFIG */
+		$("a.preview").hover(function(e){
+		this.t = this.title;
+		this.title = "";
+		var c = (this.t != "") ? "<br/>" + this.t : "";
+		$("body").append("<p id='preview'><img src='"+ this.href +"' alt='Image preview' />"+ c +"</p>");     
+		$("#preview")
+		.css("top",(e.pageY - xOffset) + "px")
+		.css("left",(e.pageX + yOffset) + "px")
+		.fadeIn("fast");   
+		},
+		function(){
+		this.title = this.t;
+		$("#preview").remove();
+		});
+		$("a.preview").mousemove(function(e){
+		$("#preview")
+		.css("top",(e.pageY - xOffset) + "px")
+		.css("left",(e.pageX + yOffset) + "px");
+		});
+		};
+		// starting the script on page load
+		$(document).ready(function(){
+		imagePreview();
+		});
+	</script> 
+    
+    <script>
+		window.onload=function(){
+			if (localStorage.getItem("storageName") === "secretary"){
+				document.getElementById('doctor').style.visibility='hidden' ;
+			}
+		}
+	</script>
+    
   </head>
 
   <body>
@@ -79,9 +89,12 @@ imagePreview();
     	
 		<div class="first">
 			<div class="row ">
-            	 <div class="col-sm-12 allignCenter">
+            	 <div class="col-sm-7 allignRight">
                  	<h2>Patient's History</h2>
-                 </div>     
+                 </div> 
+                 <div class="col-sm-5 allignCenter marginTop10">
+                 	<a href="searchPatient.html" class="btn btn-primary btn-sm">New Search</a>
+                 </div>    
             </div>	
             
             <div class="row marginTop20" style="font-size:20px">
@@ -116,7 +129,8 @@ imagePreview();
         						<th>Diagnosis</th>
         						<th>Comments</th>
         						<th>Photos</th>
-        						<th>Medicines</th>                                
+        						<th>Medicines</th>
+                                <th>Doctor</th>                                
       						</tr>
     					</thead>
     					<tbody>
@@ -128,15 +142,16 @@ imagePreview();
                                 	<a class="preview" href="images/acne2.jpg" ><img src="images/acne2.jpg" width="30" /></a>
 								</td>
         						<td>1. Brevoxyl<br> 2. Triaz</td>
+                                <td>Andreas H.</td>
         						                             
       						</tr>
                             <tr>
         						<td>15-Feb-2015</td>
         						<td>Acme</td>
         						<td>Some doctor's comments will <br>go here and some more here</td>
-        						<td><a class="preview" href="images/noAcne.jpg" ><img src="images/noAcne.jpg" width="30" /></a>                                	
-								</td>
-        						<td></td>               
+        						<td><a class="preview" href="images/noAcne.jpg" ><img src="images/noAcne.jpg" width="30" /></a></td>
+        						<td></td>
+                                <td>Andreas H.</td>               
       						</tr>
     					</tbody>
   					</table>
@@ -153,7 +168,7 @@ imagePreview();
             
              <div class="row marginTop20" >
 				<div class="col-sm-7"></div>
-                <div class="col-sm-3"><a href="diagnosis.html" class="btn btn-primary btn-sm">New Diagnosis</a></div>        
+                <div class="col-sm-3" id="doctor"><a href="diagnosis.html" class="btn btn-primary btn-sm">New Diagnosis</a></div>        
             </div>
             
             
